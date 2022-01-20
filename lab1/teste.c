@@ -4,6 +4,7 @@
 
 // COMANDO PARA COMPILAR PROGRAMA: gcc *.c *.h -o teste
 // COMANDO PARA EXECUTAR PROGRAMA: ./teste 
+//	Aluno: Lucas de Lima Castro MAT: 21551892
 
 void insere(int tipo){
 	TEncadeada* Encadeada = CriarLista();
