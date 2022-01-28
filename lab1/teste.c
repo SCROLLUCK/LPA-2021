@@ -23,6 +23,7 @@ void insere(int tipo){
 	Encadeada->lista_eventos_listar(*Encadeada->lista);
 	free(Encadeada);
 }
+
 int main() {
    
 	printf("Questao 1: Insere no inicio\n\n");
@@ -31,5 +32,6 @@ int main() {
 	insere(2);
 	printf("Questao 3: Insere ordenado\n\n");
 	insere(3);
+
 }
 
