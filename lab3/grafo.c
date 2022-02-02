@@ -78,7 +78,7 @@ int main(int argc, char **argv){
 
     int i=0;
 	while(!feof(f)){
-		no_t* novo_no = malloc(sizeof(no_t));
+        no_t* novo_no = malloc(sizeof(no_t));
 		if(!novo_no){ 
             perror("erro ao alocar novo nó");
             exit(1);
@@ -89,6 +89,6 @@ int main(int argc, char **argv){
         // printf("%d\t%lf\t%lf\n",novo_no->id, novo_no->pos_x, novo_no->pos_y);
         i++;
 	}
-    grafo_atualizar_vizinhos(grafo);
-    grafo_imprimir(grafo);
+    grafo->grafo_atualizar_vizinhos(grafo);
+    grafo->grafo_imprimir(grafo);
 }
