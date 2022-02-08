@@ -1,5 +1,5 @@
-#ifndef GRAFO_H_INCLUDED
-#define GRAFO_H_INCLUDED
+#ifndef DSICRETO_H_INCLUDED
+#define DISCRETO_H_INCLUDED
 
 #include <stdbool.h>
 
@@ -46,5 +46,4 @@ struct grafo_t{
     TAtualiza grafo_atualizar_vizinhos;
 };
 
-grafo_t* grafo_criar(int tamanho, double raio_comunicacao);
-#endif // GRAFO_H_INCLUDED
+#endif // DISCRETO_H_INCLUDED
