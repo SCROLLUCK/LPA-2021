@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 // COMANDO PARA COMPILAR PROGRAMA: gcc *.c -o read_zip
-// COMANDO PARA EXECUTAR PROGRAMA: ./read_zip <nome do arquivo zip>
+// COMANDO PARA EXECUTAR PROGRAMA: ./read_zip <nome do arquivo>
 //	Aluno: Lucas de Lima Castro MAT: 21551892
 
 struct zip_file_hdr {
@@ -46,8 +46,9 @@ int main(int argc, char **argv){
             printf(" --> Nome do Arquivo: %s\n",name_file);
             printf(" --> Tamanho Compactado: %d\n",file_hdr->compressed_size);
             printf(" --> Tamanho Descompactado: %d\n",file_hdr->uncompressed_size);
+            i++;
         }
         fseek(zip_file, file_hdr->extra_field_length + file_hdr->compressed_size, SEEK_CUR);
-        i++;
+        
     }   
 }   
