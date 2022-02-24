@@ -47,6 +47,10 @@ int main(int argc, char **argv){
             printf(" --> Tamanho Compactado: %d\n",file_hdr->compressed_size);
             printf(" --> Tamanho Descompactado: %d\n",file_hdr->uncompressed_size);
             i++;
+        }else{
+            free(file_hdr);
+            fclose(zip_file);
+            exit(1);
         }
         fseek(zip_file, file_hdr->extra_field_length + file_hdr->compressed_size, SEEK_CUR);
         
