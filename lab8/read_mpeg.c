@@ -72,5 +72,6 @@ int main(int argc, unsigned char **argv){
         }
     }
     free(start_code);
+    fclose(mpeg_file);
     exit(0);
 }
