@@ -31,7 +31,7 @@ int main(int argc, unsigned char **argv){
     
     while(!feof(mpeg_file)){
         fread(start_code, sizeof(char)*3, 1, mpeg_file);
-        if(memcmp(start_code,"\x00\x00\x01", 3) == 0) {
+        if(memcmp(start_code,"\x00\x00\x01", 3) == 0){
             type = fgetc(mpeg_file);
             printf("--> Código: %.2x -- ",type);
             switch(type){
@@ -67,7 +67,7 @@ int main(int argc, unsigned char **argv){
                     else printf("Tipo de stream não implementado\n");
                     break;
             }
-        }else {
+        }else{
             fseek(mpeg_file, -2, SEEK_CUR);
         }
     }
