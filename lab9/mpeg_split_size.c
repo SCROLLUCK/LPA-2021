@@ -40,7 +40,6 @@ int main(int argc, unsigned char **argv){
 
             buffer_sequence[buffer_ocupation++] = code_prefix[0];
             fseek(mpeg_file, -3, SEEK_CUR);
-            continue;
         
         }else{
 
